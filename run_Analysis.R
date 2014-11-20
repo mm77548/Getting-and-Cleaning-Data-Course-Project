@@ -23,7 +23,7 @@ data_mean_std <- all_data[, c(1, 2, features_mean_std$V1+2)]
 labels <- read.table("activity_labels.txt", stringsAsFactors=FALSE)
 data_mean_std$label <- labels[data_mean_std$label, 2]
 
-# make a list of column and feature names then use that list a new column names
+# make a list of column and feature names then use that list as new column names
 list_colnames <- c("subject", "label", features_mean_std$V2)
 colnames(data_mean_std) <- list_colnames
 
